@@ -27,13 +27,13 @@ router.get('walker/summary', async function(req, res) {
         SELECT u.username AS walker_username,
         COUNT(w.request_id) AS total_walks,
         CASE
-            WHEN COUNT()
+            WHEN COUNT(wr.rating)
         FROM USers u
         LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status = 'accepted'
         LEFT JOIN WalkRequests wrq ON wa.request_id = wrq.request_id AND wrq.status = 'completed'
         LEFT JOIN WalkRatings wr ON wrq.request_id = wr.request_id
         WHERE u.role = 'walker'
-        GROUP BY u.user_id
+        GROUP BY u.user_id, u.username
         `);
     res.json(rows);
 });
