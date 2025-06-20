@@ -4,7 +4,7 @@ var db = require('../db');
 
 // GET all dogs
 router.get('/dogs', async function(req, res) {
-    const [rows] = await db.query('SELECT do FROM Dogs');
+    const [rows] = await db.query('SELECT dog_name, FROM Dogs');
         res.json(rows);
     });
 
