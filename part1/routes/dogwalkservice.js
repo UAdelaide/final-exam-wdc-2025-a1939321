@@ -25,7 +25,7 @@ router.get('/walkrequests', async function(req, res) {
 router.get('walker/summary', async function(req, res) {
     const [rows] = await db.query(`
         SELECT
-        FROM`);
+        FROM USers u`);
 });
 
 module.exports = router;
