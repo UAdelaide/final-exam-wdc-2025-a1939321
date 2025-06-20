@@ -29,7 +29,7 @@ router.get('walker/summary', async function(req, res) {
         CASE
             WHEN COUNT()
         FROM USers u
-        LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status =
+        LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status = 'completed'
         `);
     res.json(rows);
 });
