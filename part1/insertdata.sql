@@ -1,4 +1,4 @@
--- Insert five users into the Users table
+
 INSERT INTO Users (username, email, password_hash, role) VALUES
     ('alice123', 'alice@example.com', 'hashed123', 'owner'),
     ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
@@ -6,7 +6,6 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
     ('david456', 'david@example.com', 'hashed101', 'walker'),
     ('emma789', 'emma@example.com', 'hashed202', 'owner');
 
--- Insert five dogs into the Dogs table, using subqueries to get owner_id
 INSERT INTO Dogs (owner_id, name, size) VALUES
     ((SELECT user_id FROM Users WHERE username = 'alice123'), 'Max', 'medium'),
     ((SELECT user_id FROM Users WHERE username = 'carol123'), 'Bella', 'small'),
