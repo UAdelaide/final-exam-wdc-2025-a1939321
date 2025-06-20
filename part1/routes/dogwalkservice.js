@@ -7,8 +7,6 @@ router.get('/dogs', async function(req, res) {
     try {
         const [rows] = await db.query('SELECT * FROM Dogs');
         res.json(rows);
-    } catch (err) {
-        next(err);
     }
 });
 
