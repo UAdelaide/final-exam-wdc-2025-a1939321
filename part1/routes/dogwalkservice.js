@@ -24,7 +24,10 @@ router.get('/walkrequests/open', async function(req, res) {
 // GET Walker SUMMARY
 router.get('walker/summary', async function(req, res) {
     const [rows] = await db.query(`
-        SELECT u.username AS 
+        SELECT u.username AS walker_username,
+        COUNT(w.request_id) AS total_walks,
+        CASE
+            
         FROM USers u`);
     res.json(rows);
 });
