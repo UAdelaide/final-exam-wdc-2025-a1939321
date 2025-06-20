@@ -27,8 +27,9 @@ router.get('walker/summary', async function(req, res) {
         SELECT u.username AS walker_username,
         COUNT(w.request_id) AS total_walks,
         CASE
-            
-        FROM USers u`);
+            WHEN COUNT()
+        FROM USers u
+        `);
     res.json(rows);
 });
 
