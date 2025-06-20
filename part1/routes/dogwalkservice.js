@@ -9,6 +9,8 @@ router.get('/dogs', async function(req, res) {
     });
 
 // GET open walkrequests
-router.get('/walkrequests', async function(req, res))
+router.get('/walkrequests', async function(req, res) {
+
+});
 
 module.exports = router;
