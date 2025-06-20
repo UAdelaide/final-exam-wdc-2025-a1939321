@@ -29,6 +29,7 @@ router.get('walker/summary', async function(req, res) {
         CASE
             WHEN COUNT()
         FROM USers u
+        LEFT JOIN WalkAp
         `);
     res.json(rows);
 });
