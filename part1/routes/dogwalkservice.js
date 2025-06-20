@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('../db');
 
 // GET all dogs
-router.get('/dogs', async function(req, res, next) {
+router.get('/dogs', async function(req, res) {
     try {
         const [rows] = await db.query('SELECT * FROM Dogs');
         res.json(rows);
@@ -13,6 +13,6 @@ router.get('/dogs', async function(req, res, next) {
 });
 
 // GET open walkrequests
-router.get('/walkrequests', async function(req, res, ))
+router.get('/walkrequests', async function(req, res, next))
 
 module.exports = router;
