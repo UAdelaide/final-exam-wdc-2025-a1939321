@@ -30,7 +30,8 @@ router.get('walker/summary', async function(req, res) {
             WHEN COUNT()
         FROM USers u
         LEFT JOIN WalkApplications wa ON u.user_id = wa.walker_id AND wa.status = 'accepted'
-        LEFT JOIN WalkRequests wrq ON wa.request_id = wrq.request_id AND
+        LEFT JOIN WalkRequests wrq ON wa.request_id = wrq.request_id AND wrq.status = 'completed'
+        LEFT JOIN WalkRatings wr ON
         `);
     res.json(rows);
 });
