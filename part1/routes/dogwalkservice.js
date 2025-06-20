@@ -21,6 +21,6 @@ router.get('/walkrequests', async function(req, res) {
     res.json(rows);
 });
 
-//
+// GET Wal
 
 module.exports = router;
