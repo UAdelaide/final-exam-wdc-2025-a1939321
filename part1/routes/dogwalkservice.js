@@ -25,7 +25,7 @@ router.get('/walkrequests/open', async function(req, res) {
 router.get('/walker/summary', async function(req, res) {
     const [rows] = await db.query(`
         SELECT u.username AS walker_username,
-            COUNT(w.request_id) AS total_walks,
+            COUNT(w.req_id) AS total_walks,
             CASE
                 WHEN COUNT(wr.rating_id) = 0 THEN NULL
                 ELSE AVG(wr.rating)
