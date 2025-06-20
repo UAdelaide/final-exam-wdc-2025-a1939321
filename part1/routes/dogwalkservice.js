@@ -23,7 +23,7 @@ router.get('/walkrequests', async function(req, res) {
 
 // GET Walker SUMMARY
 router.get('walker/summary', async function(req, res) {
-    
+    const [rows] = await 
 });
 
 module.exports = router;
