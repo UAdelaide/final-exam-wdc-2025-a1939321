@@ -22,6 +22,8 @@ router.get('/walkrequests', async function(req, res) {
 });
 
 // GET Walker SUMMARY
-router.get('walker/summary', async function(req, res) {});
+router.get('walker/summary', async function(req, res) {
+    
+});
 
 module.exports = router;
