@@ -193,8 +193,7 @@ function login(){
             } else if (data.user.role === 'walker'){
                 window.location.href = '/walker-dashboard';
             }
-    }
-        else if (this.readyState == 4 && this.status >= 400) {
+        } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
     };
