@@ -62,6 +62,7 @@ router.post('/logout', function (req, res) {
   delete req.session.user;
   res.json({ message: 'Logged out successfully' });
   });
-  
+
+router.get('/dog', async function(req, res) {)
 
 module.exports = router;
