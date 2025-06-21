@@ -63,16 +63,18 @@ router.post('/logout', function (req, res) {
   res.json({ message: 'Logged out successfully' });
   });
 
-router.get('/dog', async function(req, res) => {
-  const { username } = req.session.user:
+router.get('/dog', async function(req, res) {
+  const { username } = req.session.user;
   try {
-    const[rows] = db.query(`
-    SELECT  d.dog_id, dname
-    FROM Dogs d
-    JOIN Users u ON d.owner_id = u.user_id
-    WHERE u.user_id = ?`, [username]);
-  res.json(rows);
-}
+    const [rows] = await db.query(`
+      SELECT d.dog_id, dname
+      FROM Dogs d
+      JOIN Users u ON d.owner_id = u.user_id
+      WHERE u.username = ?`, [username]);
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch dogs' });
+  }
 });
 
 module.exports = router;
