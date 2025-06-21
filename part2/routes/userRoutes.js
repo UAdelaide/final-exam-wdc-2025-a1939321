@@ -68,6 +68,7 @@ router.get('/dog', async function(req, res) {
     SELECT  d.dog_id, dname, d.size, u.username, d.owner_id
     FROM Dogs d
     JOIN Users u ON d.owner_id = u.user_id`);
-  )
+  res.json(rows);
+});
 
 module.exports = router;
