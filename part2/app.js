@@ -20,6 +20,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: false }
 }));
+
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
 
