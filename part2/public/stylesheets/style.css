@@ -27,7 +27,10 @@ body {
     font-weight: bold;
     color: #1e90ff;
 }
-
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
 
 header {
     background-color: rgb(250, 250, 251);
