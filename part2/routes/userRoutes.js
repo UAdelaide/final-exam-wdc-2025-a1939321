@@ -65,6 +65,6 @@ router.post('/logout', function (req, res) {
 
 router.get('/dog', async function(req, res) {
   const [rows] = await db.query(`
-    SELECT  d.dog_id, dname,`))
+    SELECT  d.dog_id, dname, d.size, u.username, d.owner`))
 
 module.exports = router;
