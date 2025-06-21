@@ -8,7 +8,9 @@
 
 <body>
     <h1>Dog of the day</h1>
-    <p>Welcome to Express</p>
+    
+    <div class="dog-image" :style="{ backgroundImage: 'url(' + dogImage + ')' }"></div>
+
     <script>
         const { createApp } = Vue;
 
