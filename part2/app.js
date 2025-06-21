@@ -8,7 +8,7 @@ require('dotenv').config();
 const app = express();
 var dbConnectionPool = mysql.createPool({
     host: '127.0.0.1',
-    multipleStatements: true,
+    multipleStatements: true
 });
 
 
