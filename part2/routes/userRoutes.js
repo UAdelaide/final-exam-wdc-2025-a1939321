@@ -64,7 +64,7 @@ router.post('/logout', function (req, res) {
   });
 
 router.get('/dog', async function(req, res) => {
-  const {username} = req.session.user:
+  const { username } = req.session.user:
   try {
     const[rows] = db.query(`
     SELECT  d.dog_id, dname
