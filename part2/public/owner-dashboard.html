@@ -83,7 +83,7 @@
 
         async function getDog(){
           const res = await fetch('/api/owner/dogs');
-          
+          dog.value = await res.json();
         }
         async function loadWalks() {
           try {
