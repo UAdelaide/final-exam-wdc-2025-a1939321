@@ -93,6 +93,7 @@
           const res = await fetch('/api/users/dogs');
           dog.value = await res.json();
         }
+
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
