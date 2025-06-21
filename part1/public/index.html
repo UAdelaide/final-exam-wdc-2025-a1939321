@@ -15,42 +15,10 @@
         createApp({
             data() {
                 return {
-                    message: 'Welcome to the Dog Walking Service!'
+                    message
                 };
             }
         }).mount('#app');
-
-        function login() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-
-            fetch('/api/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ username, password })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = data.redirectUrl; // Redirect based on user type
-                } else {
-                    document.getElementById('error-message').innerText = data.message;
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('error-message').innerText = 'Login failed. Please try again.';
-            });
-        }
-
-        function logout() {
-            fetch('/api/logout')
-                .then(() => {
-                    window.location.href = '/'; // Redirect to home page
-                });
-        }
     </script>
 </body>
 </html>
