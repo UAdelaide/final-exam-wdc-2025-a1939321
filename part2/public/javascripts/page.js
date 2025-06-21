@@ -194,7 +194,7 @@ function login(){
                 window.location.href = '/walker-dashboard';
             }
         } else if (this.readyState == 4 && this.status >= 400) {
-            alert("failed")
+            alert("Failed Login");
             // document.getElementById('error-message').textContent = "Login failed";
             // document.getElementById('error-message').style.display = "block";
         }
