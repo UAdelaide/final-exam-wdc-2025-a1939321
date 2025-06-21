@@ -59,7 +59,8 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  delete 
+  delete req.session.user;
+  res.json({ message: 'Logged out successfully' });
   });
 
 module.exports = router;
