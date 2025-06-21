@@ -189,6 +189,7 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText);
+            console.log('Login response:', data);//debugging line
             if (data.user.role === 'owner'){
                 window.location.href = '/owner-dashboard.html';
             } else if (data.user.role === 'walker'){
