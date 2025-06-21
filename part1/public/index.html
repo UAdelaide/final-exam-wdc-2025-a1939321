@@ -15,7 +15,6 @@
         createApp({
             data() {
                 return {
-                    return {
                     dogImage: ''
                 };
             },
@@ -29,7 +28,6 @@
                         console.error('Error fetching dog image:', error);
                         this.dogImage = 'https://via.placeholder.com/200'; // Fallback
                     });
-                };
             }
         }).mount('#app');
     </script>
