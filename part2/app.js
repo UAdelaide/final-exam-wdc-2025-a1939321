@@ -6,8 +6,6 @@ var mysql = require('mysql');
 
 const app = express();
 
-
-});
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
