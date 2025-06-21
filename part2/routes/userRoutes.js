@@ -44,9 +44,9 @@ router.post('/login', async (req, res) => {
       SELECT user_id, username, role FROM Users
       WHERE username = ? AND password_hash = ?
     `, [username, password]);
-      console.log('Query result:', rows);
+      console.log('Query result:', rows);//debugging line
     if (rows.length === 0) {
-      console.log('No matching user found for username:', username);
+      console.log('No matching user found for username:', username); //debugging line
       return res.status(401).json({ error: 'Invalid credentials' });
     }
     req.session.user = rows[0];
