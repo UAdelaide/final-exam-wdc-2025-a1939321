@@ -196,8 +196,8 @@ function login(){
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Failed Login");
-            // document.getElementById('error-message').textContent = "Login failed";
-            // document.getElementById('error-message').style.display = "block";
+            document.getElementById('error-message').textContent = "Login failed";
+            document.getElementById('error-message').style.display = "block";
         }
     };
 
