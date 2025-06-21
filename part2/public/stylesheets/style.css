@@ -52,7 +52,7 @@ body {
     outline: none;
 }
 .form-group input[type="password"] {
-    font-family: 'Aria';
+    font-family: 'Arial', sans-serif;
 }
 
 header {
