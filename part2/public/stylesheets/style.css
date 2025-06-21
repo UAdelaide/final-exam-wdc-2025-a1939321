@@ -46,6 +46,10 @@ body {
     font-size: 1rem;
     box-sizing: border-box;
 }
+.form-group input:focus {
+    border-color: #1e90ff;
+    outline: none;
+}
 
 header {
     background-color: rgb(250, 250, 251);
