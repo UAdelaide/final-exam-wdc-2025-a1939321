@@ -63,10 +63,10 @@ router.post('/logout', function (req, res) {
   res.json({ message: 'Logged out successfully' });
   });
 
-router.get('/dog', async function(req, res) {
+router.get('/dog', async function(req, res) => {
   const {username} = req.session.user:
   try {
-    const(`
+    const[rows] = db.query(`
     SELECT  d.dog_id, dname
     FROM Dogs d
     JOIN Users u ON d.owner_id = u.user_id
