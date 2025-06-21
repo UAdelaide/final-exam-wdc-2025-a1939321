@@ -16,7 +16,7 @@
     </div>
     <p>Click the button below to see a random dog image!</p>
     <button @click="fetchDog">Get Random Dog</button>
-    <img class="dog-img" :src="dogImage" alt="Random Dog" v-if="dogImage" />
+    <img class="dog-img" :src="dogImage">
     <script>
         const { createApp } = Vue;
 
