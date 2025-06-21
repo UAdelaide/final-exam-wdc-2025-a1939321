@@ -175,6 +175,7 @@ function downvote(index) {
 
 
 function login(){
+    console.log("Login function called");
 
     let user = {
         user: document.getElementById('username').value,
