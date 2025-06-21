@@ -6,17 +6,18 @@
 </head>
 
 <body>
-    <div>
-    <h1>Dog of the day</h1>
-    <h2>Welcome to Walk Dog Service</h2>
-    <div class="dog-info">
-        <p>name:</p>
-        <p>Age</p>
-        <p>Breed</p>
+    <div id="app">
+        <h1>Dog of the day</h1>
+        <h2>Welcome to Walk Dog Service</h2>
+        <div class="dog-info">
+            <p>name:</p>
+            <p>Age</p>
+            <p>Breed</p>
+        </div>
+        <p>Click the button below to see a random dog image!</p>
+        <button @click="fetchDog">Get Random Dog</button>
+        <img class="dog-img" :src="dogImage">
     </div>
-    <p>Click the button below to see a random dog image!</p>
-    <button @click="fetchDog">Get Random Dog</button>
-    <img class="dog-img" :src="dogImage">
     <script>
         const { createApp } = Vue;
 
