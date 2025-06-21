@@ -188,7 +188,7 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText);
-            if
+            if (data.user.role === 'owner')
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
