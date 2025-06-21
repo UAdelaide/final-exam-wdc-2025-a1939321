@@ -32,11 +32,11 @@
                         console.error('Error fetching dog image:', error);
                         this.dogImage = 'https://via.placeholder.com/200';
                     }
-                    
-                },
-                mounted() {
-                    this.fetchDog();
                 }
+            },
+            mounted() {
+                this.fetchDog();
+            }
         }).mount('#app');
     </script>
 </body>
