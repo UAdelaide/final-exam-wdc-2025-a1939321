@@ -74,7 +74,7 @@ router.get('/dogs', async (req, res) => {
       if (rows.length === 0) {
         return res.status(404).json({ error: 'No dogs found for this user' });
       }
-    res.json(rows);
+    res.json(rows[0].dog_id);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
   }
