@@ -23,17 +23,19 @@
                 };
             },
             method: {}
-            async fetchDog() {
-                try {
-                    const response = await fetch('https://dog.ceo/api/breeds/image/random');
-                    const data = await response.json();
-                    this.dogImage = data.message;
-                } catch (error) {
-                    console.error('Error fetching dog image:', error);
-                    this.dogImage = 'https://via.placeholder.com/200';
+                async fetchDog() {
+                    try {
+                        const response = await fetch('https://dog.ceo/api/breeds/image/random');
+                        const data = await response.json();
+                        this.dogImage = data.message;
+                    } catch (error) {
+                        console.error('Error fetching dog image:', error);
+                        this.dogImage = 'https://via.placeholder.com/200';
+                    }
+                },
+                mounted() {
+                    this.fetchDog();
                 }
-            },
-            
         }).mount('#app');
     </script>
 </body>
