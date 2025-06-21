@@ -72,6 +72,7 @@ router.get('/dog', async function(req, res) => {
     JOIN Users u ON d.owner_id = u.user_id
     WHERE u.user_id = ?`, [username]);
   res.json(rows);
+}
 });
 
 module.exports = router;
