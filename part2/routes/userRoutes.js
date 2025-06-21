@@ -63,6 +63,7 @@ router.post('/logout', function (req, res) {
   res.json({ message: 'Logged out successfully' });
   });
 
-router.get('/dog', async function(req, res) {)
+router.get('/dog', async function(req, res) {
+  const [rows] = await db.query(``))
 
 module.exports = router;
