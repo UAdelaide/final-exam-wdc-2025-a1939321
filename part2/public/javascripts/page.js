@@ -187,6 +187,7 @@ function login(){
 
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
+        console.log('Request state:', this.readyState, 'Status:', this.status); //debugging line
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText);
             console.log('Login response:', data);//debugging line
