@@ -37,7 +37,9 @@ body {
     font-weight: bold;
     color: #333;
 }
-.form-group input{}
+.form-group input{
+    width: ;
+}
 
 header {
     background-color: rgb(250, 250, 251);
