@@ -52,7 +52,7 @@ body {
     outline: none;
 }
 .form-group input[type="password"] {
-    front
+    font-family: 'Aria';
 }
 
 header {
