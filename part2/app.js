@@ -6,13 +6,7 @@ const mysql = require('mysql');
 
 const app = express();
 
-var dbConnectionPool = mysql.createPool({
-    host: '127.0.0.1',
-    multipleStatements: true
-});
-app.use(function(req, res, next) {
-    req.pool = dbConnectionPool;
-    next();
+);
 });
 
 // Middleware
