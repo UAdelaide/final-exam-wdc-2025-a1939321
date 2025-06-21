@@ -190,9 +190,9 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText);
             if (data.user.role === 'owner'){
-                window.location.href = '/owner-dashboard';
+                window.location.href = '/owner-dashboard.html';
             } else if (data.user.role === 'walker'){
-                window.location.href = '/walker-dashboard';
+                window.location.href = '/walker-dashboard.html';
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Failed Login");
