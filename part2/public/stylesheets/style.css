@@ -48,8 +48,10 @@ body {
 }
 .form-group input:focus {
     border-color: #104e8b;
+    background-color: #fff8dc;
     outline: none;
 }
+
 
 header {
     background-color: rgb(250, 250, 251);
