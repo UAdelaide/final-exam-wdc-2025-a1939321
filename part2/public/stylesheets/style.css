@@ -12,7 +12,10 @@ body {
     background-color: #f0f4f8;
 
 }
-.container
+.container{
+    background: white;
+    padding
+}
 header {
     background-color: rgb(250, 250, 251);
     border-top: 3px solid orange;
