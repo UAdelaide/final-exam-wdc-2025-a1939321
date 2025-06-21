@@ -71,6 +71,9 @@ router.get('/dog', async function(req, res) {
       FROM Dogs d
       JOIN Users u ON d.owner_id = u.user_id
       WHERE u.username = ?`, [username]);
+      if (rows.length === 0) {
+        return res.status(404).json({ error: 'No dogs found for this user' });
+      }
     res.json(rows);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch dogs' });
