@@ -53,6 +53,7 @@ router.post('/login', async (req, res) => {
     console.log('Session set:', req.session.user); //debugging line
     res.json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
+    console.error('Login error:', error); //debugging line
     res.status(500).json({ error: 'Login failed' });
   }
 });
