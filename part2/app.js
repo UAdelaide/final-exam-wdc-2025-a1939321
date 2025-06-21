@@ -6,10 +6,10 @@ const mysql = require('mysql');
 require('dotenv').config();
 
 const app = express();
-var dbConnectionPool = mysql.createPool({
-    host: '127.0.0.1',
-    multipleStatements: true
-});
+// var dbConnectionPool = mysql.createPool({
+//     host: '127.0.0.1',
+//     multipleStatements: true
+// });
 
 
 // Middleware
