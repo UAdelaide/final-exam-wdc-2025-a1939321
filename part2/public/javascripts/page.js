@@ -174,14 +174,6 @@ function downvote(index) {
 }
 
 
-// Assign the login function to the login button if it exists
-document.addEventListener('DOMContentLoaded', function() {
-    var loginBtn = document.getElementById('login-btn');
-    if (loginBtn) {
-        loginBtn.addEventListener('click', login);
-    }
-});
-
 function login(){
 
     let user = {
