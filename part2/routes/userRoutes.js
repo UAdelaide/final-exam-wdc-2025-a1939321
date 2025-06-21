@@ -46,6 +46,7 @@ router.post('/login', async (req, res) => {
     `, [username, password]);
       console.log('Query result:', rows);
     if (rows.length === 0) {
+      console.log('No matching user found for username:', username);
       return res.status(401).json({ error: 'Invalid credentials' });
     }
     req.session.user = rows[0];
