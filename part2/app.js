@@ -2,9 +2,18 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const mysql = require('mysql2/promise');
 
 const app = express();
 
+var dbConnectionPool = mysql.createPool({
+    host: '127.0.0.1',
+    multipleStatements: true
+});
+app.use(function(req, res, next) {
+    req.pool = dbConnectionPool;
+    next();
+});
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
