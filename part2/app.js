@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const mysql = require('mysql');
 require('dotenv').config();
 
 const app = express();
