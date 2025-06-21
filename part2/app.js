@@ -17,6 +17,7 @@ app.use(function(req, res, next) {
 
 // Middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({
     secret: 'b706835de79a2b4e80506f582af3676ac8361638',
