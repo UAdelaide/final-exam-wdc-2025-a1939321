@@ -189,7 +189,11 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             const data = JSON.parse(this.responseText);
             if (data.user.role === 'owner'){
-                window.location.href = '/owner-dashbo'
+                window.location.href = '/owner-dashboard';
+            } else if (data.user.role === 'walker'){
+                window.location.href = '/walker-dashboard';
+            } else {
+                alert("Unknown user role");
             }
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
