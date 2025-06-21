@@ -58,7 +58,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/logout', (req, res) => {
+router.post('/logout', function (req, res) {
   delete req.session.user;
   res.json({ message: 'Logged out successfully' });
   });
